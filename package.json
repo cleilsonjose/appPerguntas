@@ -1,0 +1,11 @@
+{
+  "name": "appperguntas",
+  "version": "1.0.0",
+  "description": "um app de perguntas e resposta inspirado no Yahoo respostas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cleilson José",
+  "license": "ISC"
+}
