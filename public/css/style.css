@@ -11,14 +11,24 @@ nav {
 nav img {
   height: 30px;
 }
+.dark{
+  color: #e1e1e1;
+}
+.card-header{
+  background-color:#343a40;
+  
+}
 
 .card-body textarea {
   height: 18rem;
   resize: none;  
 }
 .card-body textarea, input {
-  text-transform: capitalize;
   margin-bottom: 1rem;
+}
+.card-body label{
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 .botton {
 	text-align: right;
@@ -26,9 +36,6 @@ nav img {
 }
 
 @media screen and (max-width: 992px) {
-  .card-body2 {
-    height: 73vh;
-  }
   .card-body textarea {
     height: 45vh;
   }
@@ -39,9 +46,6 @@ nav img {
 }
 
 @media screen and (max-width: 700px) {
-  .card-body2 {
-    height: 73vh;
-  }
   .card-body textarea {
     height: 35vh;
   }
