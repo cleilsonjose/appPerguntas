@@ -1,8 +1,12 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
+//bodyParser
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 //rotas
 app.get('/', (req,res) =>{
@@ -12,6 +16,12 @@ app.get('/', (req,res) =>{
 app.get("/perguntar", (req,res) =>{
   res.render("perguntar");
 });
+
+app.post("/salvarpergunta", (req,res) =>{
+  var titulo = req.body.titulo;
+  var descricao = req.body.descricao;
+  res.send("formulario! titulo = " + titulo + " " +" descricao " + descricao);
+})
 
 app.listen(8080,() =>{
   console.log("App rodando!!");
