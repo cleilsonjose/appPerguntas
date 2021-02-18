@@ -1,6 +1,14 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const connection = require('./database/database');
+//database 
+
+connection.authenticate().then(() => {
+  console.log('conexão com o banco de dados feita com sucesso');
+}).catch((msgerro) => {
+  console.log(msgerro);
+})
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
